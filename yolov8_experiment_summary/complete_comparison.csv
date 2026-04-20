@@ -1,0 +1,5 @@
+实验代号,实验名称,最佳mAP50,最佳mAP50_epoch,最佳mAP50-95,最佳mAP50-95_epoch,训练轮次,最大轮次,早停,颜色,模型路径,类型,最佳精度,最佳召回率
+A_CIoU_Baseline,CIoU Baseline,0.8855,N/A,0.5404,N/A,100,100,N/A,#2E86AB,/root/exp2_100epochs/weights/best.pt,基线模型,,
+B_Focal-CIoU,Focal-CIoU,0.8829,11,0.5303,1,21,100,是,#A23B72,runs/ablation/B_Focal-CIoU/weights/best.pt,消融实验,0.9486,0.8291
+C_EIoU,EIoU,0.8829,11,0.5303,1,21,100,是,#F18F01,runs/ablation/C_EIoU/weights/best.pt,消融实验,0.9486,0.8291
+D_Focal-EIoU,Focal-EIoU,0.8829,11,0.5303,1,21,100,是,#C73E1D,runs/ablation/D_Focal-EIoU/weights/best.pt,消融实验,0.9486,0.8291

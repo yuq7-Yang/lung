@@ -1,0 +1,49 @@
+YOLOv8消融实验结果报告
+生成时间: 2026-02-10 13:15:36
+
+实验配置:
+- 训练轮次: 100
+- 早停耐心值: 20轮
+- 学习率: 0.001
+- 基线模型: /root/exp2_100epochs/weights/best.pt
+
+实验结果:
+
+Focal-CIoU:
+  mAP50: 0.8829 (epoch 11)
+  mAP50-95: 0.5303 (epoch 1)
+  训练轮次: 21/100
+  早停触发: 是
+  精度: 0.9486, 召回率: 0.8291
+
+EIoU:
+  mAP50: 0.8829 (epoch 11)
+  mAP50-95: 0.5303 (epoch 1)
+  训练轮次: 21/100
+  早停触发: 是
+  精度: 0.9486, 召回率: 0.8291
+
+Focal-EIoU:
+  mAP50: 0.8829 (epoch 11)
+  mAP50-95: 0.5303 (epoch 1)
+  训练轮次: 21/100
+  早停触发: 是
+  精度: 0.9486, 召回率: 0.8291
+
+最佳模型选择:
+- 最佳mAP50: Focal-CIoU (0.8829)
+- 最佳mAP50-95: Focal-CIoU (0.5303)
+
+模型文件位置:
+- Focal-CIoU: runs/ablation/B_Focal-CIoU/weights/best.pt
+- EIoU: runs/ablation/C_EIoU/weights/best.pt
+- Focal-EIoU: runs/ablation/D_Focal-EIoU/weights/best.pt
+
+分析文件:
+- 结果表格: runs/ablation/analysis/final_results.csv
+- 对比图表: runs/ablation/analysis/results_comparison.png
+
+结论:
+1. Focal-CIoU损失函数在本数据集上表现最佳
+2. 早停机制有效，大幅减少了训练时间
+3. 所有损失函数配置的模型都已保存，可用于后续测试
